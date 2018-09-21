@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Healthy</string>
+    <string name="btn_register">Register New Account</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="password">Password</string>
+    <string name="user_id">E-mail</string>
+    <string name="email">Email</string>
+    <string name="re_password">Re-password</string>
+    <string name="register_new_acc">Register New Account</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="your_bmi">YOUR BMI</string>
+    <string name="calculate">CALCULATE</string>
+    <string name="previous">Previous</string>
+    <string name="logo">Logo</string>
+    <string name="date">Date</string>
+    <string name="status">Status</string>
+    <string name="add_weight">Add weight</string>
+    <string name="date_form">Date (DD/MM/YY)</string>
+    <string name="weight_form">Weight (KG)</string>
+    <string name="back">Back</string>
+
+
+</resources>

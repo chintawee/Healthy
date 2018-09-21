@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "557657275024",
+    "firebase_url": "https://healthy-c5a13.firebaseio.com",
+    "project_id": "healthy-c5a13",
+    "storage_bucket": "healthy-c5a13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557657275024:android:d592cb726267cfee",
+        "android_client_info": {
+          "package_name": "com.example.a59070023.kongkarat.healthypoon.healthyp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "557657275024-jj56m2jl80cge0hhjf057k4corm5q87e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.a59070023.kongkarat.healthypoon.healthyp",
+            "certificate_hash": "a68c07b9a67b8ff678d1baf7b09867aafe755ee6"
+          }
+        },
+        {
+          "client_id": "557657275024-uv7jj24ufpjnensmjn4gmlb3nshfmpiu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGmbuFy2SyW7BJ8iH0TqpVxYNS44OirKU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "557657275024-uv7jj24ufpjnensmjn4gmlb3nshfmpiu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
