@@ -21,12 +21,18 @@ public class Menu_fragment extends Fragment{
     FirebaseAuth fnAuth;
 
     @Override
-    public void onActivityCreated (@Nullable Bundle savedInStanceState){
-        super.onActivityCreated(savedInStanceState);
-        fnAuth = FirebaseAuth.getInstance();
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
         _menu.add("BMI");
         _menu.add("Weight");
         _menu.add("Sign out");
+    }
+
+    @Override
+    public void onActivityCreated (@Nullable Bundle savedInStanceState){
+        super.onActivityCreated(savedInStanceState);
+        fnAuth = FirebaseAuth.getInstance();
 
         ListView menuList = getView().findViewById(R.id.menu_list);
         final ArrayAdapter<String> menuAdapter = new ArrayAdapter<String>(
@@ -38,11 +44,11 @@ public class Menu_fragment extends Fragment{
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if(_menu.get(position).equals("BMI")){
                     Log.d("Menu","go to bmi");
-                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main_view,new Bmi_fragment()).commit();
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main_view,new Bmi_fragment()).addToBackStack(null).commit();
                 }
                 else if (_menu.get(position).equals("Weight")){
                     Log.d("MENU", "go to weight");
-                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main_view,new Weight_fragment()).commit();
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main_view,new Weight_fragment()).addToBackStack(null).commit();
                 }
                 else if (_menu.get(position).equals("Sign out")){
                     fnAuth.signOut();

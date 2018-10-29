@@ -66,6 +66,12 @@ public class Register_fragment extends Fragment {
                             sandVerifiedEmail(authResult.getUser());
                             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main_view,new login_fragment()).commit();
                         }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.d("REGISTER", "Error  : " + e.getMessage());
+                        }
                     });
                 }
             }
@@ -86,12 +92,12 @@ public class Register_fragment extends Fragment {
         _user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
-
+                Log.d("REGISTER","send verify email success");
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-
+                Log.d("REGISTER","send verify email failed : " + e.getMessage());
             }
         });
     }
