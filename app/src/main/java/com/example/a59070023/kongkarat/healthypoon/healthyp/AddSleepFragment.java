@@ -30,7 +30,7 @@ public class AddSleepFragment extends Fragment{
         try
         {
             sleep = (Sleep) bundle.getSerializable("sleep object");
-            status = "new";
+            status = "edit";
         }
         catch (NullPointerException e)
         {

@@ -70,7 +70,7 @@ public class Sleep_fragent extends Fragment{
 
     public void getAndShowData()
     {
-        Cursor cursor = myDB.rawQuery("select id, date, toBed, awakeTime from sleep",null);
+        Cursor cursor = myDB.rawQuery("select id, date, toBedTime, awakeTime from sleep",null);
         final ArrayList<Sleep> sleepList = new ArrayList<>();
         while (cursor.moveToNext())
         {
@@ -87,7 +87,7 @@ public class Sleep_fragent extends Fragment{
         }
         cursor.close();
 
-        ListView sleepListViwe = getView().findViewWithTag(R.id.sleep_list_view);
+        ListView sleepListViwe = getView().findViewById(R.id.sleep_list_view);
         SleepAdapter sleepAdapter = new SleepAdapter(getActivity(), R.layout.fragment_sleep_list_item, sleepList);
         sleepListViwe.setAdapter(sleepAdapter);
         sleepListViwe.setOnItemClickListener(new AdapterView.OnItemClickListener() {
