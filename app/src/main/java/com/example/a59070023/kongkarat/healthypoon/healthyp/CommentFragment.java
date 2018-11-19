@@ -102,5 +102,6 @@ public class CommentFragment extends Fragment {
                 }
             }
         };
+        task.execute();
     }
 }
