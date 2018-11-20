@@ -32,7 +32,7 @@ public class CommentAdapter extends ArrayAdapter {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View commentItem = LayoutInflater.from(context).inflate(R.layout.fragment_sleep_list_item, parent, false);
+        View commentItem = LayoutInflater.from(context).inflate(R.layout.fragment_comment_list_item, parent, false);
 
         JSONObject commentObj = postList.get(position);
         TextView commentHeader = commentItem.findViewById(R.id.comment_list_item_header);

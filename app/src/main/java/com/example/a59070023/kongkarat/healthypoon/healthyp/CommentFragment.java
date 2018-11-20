@@ -85,9 +85,12 @@ public class CommentFragment extends Fragment {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                try {
+                try
+                {
+
                     final ArrayList<JSONObject> commentList = new ArrayList<>();
-                    for (int i = 0; i < jsonArray.length(); i++) {
+                    for (int i = 0; i < jsonArray.length(); i++)
+                    {
                         JSONObject obj = jsonArray.getJSONObject(i);
                         commentList.add(obj);
                     }
@@ -97,13 +100,13 @@ public class CommentFragment extends Fragment {
                     CommentAdapter commentAdapter = new CommentAdapter(getContext(), R.layout.fragment_comment_list_item, commentList);
                     commentListView.setAdapter(commentAdapter);
 
-                } catch (JSONException e) {
+                }
+                catch (JSONException e)
+                {
                     Log.d("test", "catch JSONException : " + e.getMessage());
                 }
             }
         };
         task.execute();
-
-        //ii
     }
 }
